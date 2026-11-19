@@ -1,0 +1,302 @@
+
+/* General application colors and layout settings. */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    -fx-background-color: #141414;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.app-root, .home-view, .page-content {
+    -fx-background-color: #141414;
+}
+
+/* Hide and style the scroll panes used for the page and movie rows. */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane:focused {
+    -fx-background-insets: 0;
+}
+.page-scroll > .corner {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}
+.scroll-bar .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #4a4a4a;
+    -fx-background-radius: 6;
+    -fx-background-insets: 1;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #777777;
+}
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* Top navigation bar and StreamFlix logo. */
+.nav-bar {
+    -fx-min-height: 64;
+    -fx-pref-height: 64;
+    -fx-background-color: linear-gradient(to bottom, #000000, #141414);
+    -fx-border-color: transparent transparent #262626 transparent;
+}
+.logo {
+    -fx-text-fill: #E50914;
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+    -fx-font-family: "Impact", "Arial Black", "Segoe UI", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(229,9,20,0.45), 14, 0.2, 0, 0);
+}
+
+/* Custom controls used instead of JavaFX Button controls. */
+.custom-button {
+    -fx-cursor: hand;
+}
+.cb-label {
+    -fx-font-size: 14px;
+}
+
+.cb-primary {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-padding: 10 28 10 24;
+}
+.cb-primary:hover {
+    -fx-background-color: rgba(255,255,255,0.78);
+}
+.cb-primary .cb-label {
+    -fx-text-fill: #111111;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.cb-secondary {
+    -fx-background-color: rgba(109,109,110,0.7);
+    -fx-background-radius: 6;
+    -fx-padding: 9 22 9 18;
+}
+.cb-secondary:hover {
+    -fx-background-color: rgba(109,109,110,0.45);
+}
+.cb-secondary .cb-label {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.cb-icon {
+    -fx-background-color: rgba(20,20,20,0.72);
+    -fx-background-radius: 100;
+    -fx-border-color: rgba(255,255,255,0.45);
+    -fx-border-radius: 100;
+    -fx-border-width: 2;
+    -fx-alignment: center;
+}
+.cb-icon:hover {
+    -fx-border-color: white;
+    -fx-background-color: rgba(60,60,60,0.85);
+}
+.cb-icon .cb-label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.cb-link {
+    -fx-padding: 8 10 8 10;
+    -fx-background-color: transparent;
+}
+.cb-link .cb-label {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 14px;
+}
+.cb-link:hover .cb-label {
+    -fx-text-fill: white;
+}
+.cb-link.active .cb-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Featured movie banner at the top of the home screen. */
+.hero {
+    -fx-background-color: linear-gradient(to bottom right, #3a0a0d, #141414);
+}
+.hero-fade-left {
+    -fx-background-color: linear-gradient(to right, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.55) 45%, transparent 80%);
+}
+.hero-fade-bottom {
+    -fx-background-color: linear-gradient(to bottom, transparent 55%, #141414 100%);
+}
+.hero-tag {
+    -fx-text-fill: #E50914;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+.hero-title {
+    -fx-text-fill: white;
+    -fx-font-size: 54px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 12, 0.3, 0, 2);
+}
+.hero-meta {
+    -fx-text-fill: #46d369;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.hero-synopsis {
+    -fx-text-fill: #e5e5e5;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 6, 0.3, 0, 1);
+}
+
+/* Movie category labels and rows. */
+.category-row {
+    -fx-padding: 10 0 0 0;
+}
+.row-title {
+    -fx-text-fill: #e5e5e5;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.row-count {
+    -fx-text-fill: #777777;
+    -fx-font-size: 13px;
+}
+
+/* Movie thumbnail, hover overlay, and title styles. */
+.thumb {
+    -fx-background-color: #222222;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+}
+.thumbnail-card.hovered .thumb {
+    -fx-border-color: white;
+}
+.placeholder-title {
+    -fx-text-fill: rgba(255,255,255,0.85);
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+.thumb-overlay {
+    -fx-background-color: linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.1));
+}
+.thumb-year {
+    -fx-text-fill: #46d369;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 8 10;
+}
+.card-title {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 14px;
+    -fx-text-overrun: ellipsis;
+}
+.card-title:hover {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.thumbnail-card.hovered .card-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Footer text. */
+.footer {
+    -fx-text-fill: #666666;
+    -fx-font-size: 12px;
+}
+
+/* In-app YouTube trailer player and its controls. */
+.player-view {
+    -fx-background-color: black;
+}
+.player-top {
+    -fx-padding: 22 32 60 32;
+    -fx-background-color: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+.player-bottom {
+    -fx-padding: 60 32 26 32;
+    -fx-background-color: linear-gradient(to top, rgba(0,0,0,0.92), transparent);
+}
+.player-title {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+.player-status {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 0 8;
+}
+
+/* Custom loading animation displayed while a trailer loads. */
+.loading-overlay {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 80%, #1c0507, #000000);
+}
+.loading-logo {
+    -fx-fill: #E50914;
+    -fx-font-size: 34px;
+    -fx-font-weight: 900;
+}
+.loading-caption {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-min-width: 190;
+    -fx-alignment: center;
+}
+.loading-movie {
+    -fx-text-fill: #888888;
+    -fx-font-size: 14px;
+}
+
+/* Trailer error message shown if YouTube cannot start playback. */
+.error-box {
+    -fx-background-color: rgba(20,20,20,0.95);
+    -fx-background-radius: 12;
+    -fx-padding: 32 40 32 40;
+    -fx-border-color: #333333;
+    -fx-border-radius: 12;
+}
+.error-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+.error-text {
+    -fx-text-fill: #b3b3b3;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+/* Animated opening splash screen. */
+.splash {
+    -fx-background-color: black;
+}
+.splash-logo {
+    -fx-text-fill: #E50914;
+    -fx-font-size: 84px;
+    -fx-font-weight: 900;
+    -fx-font-family: "Impact", "Arial Black", "Segoe UI", sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(229,9,20,0.7), 30, 0.3, 0, 0);
+}
